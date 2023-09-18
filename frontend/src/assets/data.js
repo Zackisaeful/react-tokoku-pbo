@@ -1,3 +1,20 @@
+export const dataKategori = [
+  { id: 1, kategori: "makanan", img_url: "kategori-image/makanan.jpg" },
+  {
+    id: 2,
+    kategori: "handphone dan tablet",
+    img_url: "kategori-image/handphoneDanElectronik.jpg",
+  },
+  {
+    id: 3,
+    kategori: "komputer dan electronik",
+    img_url: "kategori-image/komputer.jpg",
+  },
+  { id: 4, kategori: "minuman", img_url: "kategori-image/minuman.jpg" },
+  { id: 5, kategori: "minuman", img_url: "kategori-image/minuman.jpg" },
+  { id: 6, kategori: "minuman", img_url: "kategori-image/minuman.jpg" },
+];
+
 export const dataProduct = [
   {
     id: 1,
@@ -5,6 +22,8 @@ export const dataProduct = [
     img_url: "example-product/indomie.jpg",
     deskripsi:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus possimus quidem sit mollitia qui, voluptates unde odio maxime? Consequatur ab mollitia eligendi tempora optio facilis ipsum cupiditate sed quod in suscipit, rerum eius exercitationem similique officia odit itaque necessitatibus quibusdam libero labore voluptatem fugit corporis. Quas beatae, dicta rerum quod voluptatum cupiditate assumenda saepe aliquam accusantium dignissimos, eos eius dolore, a ut! Ullam pariatur molestiae, nam eaque minus accusantium natus corrupti a alias in nulla quidem debitis, at odit quasi quia reiciendis incidunt enim? Enim reprehenderit dolorem rerum harum ab, sequi ducimus molestiae eius a repellat soluta, quaerat maxime.",
+    harga: "5000",
+    stock : 24
   },
   {
     id: 2,
@@ -12,6 +31,8 @@ export const dataProduct = [
     img_url: "example-product/indomie.jpg",
     deskripsi:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus possimus quidem sit mollitia qui, voluptates unde odio maxime? Consequatur ab mollitia eligendi tempora optio facilis ipsum cupiditate sed quod in suscipit, rerum eius exercitationem similique officia odit itaque necessitatibus quibusdam libero labore voluptatem fugit corporis. Quas beatae, dicta rerum quod voluptatum cupiditate assumenda saepe aliquam accusantium dignissimos, eos eius dolore, a ut! Ullam pariatur molestiae, nam eaque minus accusantium natus corrupti a alias in nulla quidem debitis, at odit quasi quia reiciendis incidunt enim? Enim reprehenderit dolorem rerum harum ab, sequi ducimus molestiae eius a repellat soluta, quaerat maxime.",
+    harga: "5000",
+    stock : 24
   },
   {
     id: 3,
@@ -19,6 +40,8 @@ export const dataProduct = [
     img_url: "example-product/indomie.jpg",
     deskripsi:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus possimus quidem sit mollitia qui, voluptates unde odio maxime? Consequatur ab mollitia eligendi tempora optio facilis ipsum cupiditate sed quod in suscipit, rerum eius exercitationem similique officia odit itaque necessitatibus quibusdam libero labore voluptatem fugit corporis. Quas beatae, dicta rerum quod voluptatum cupiditate assumenda saepe aliquam accusantium dignissimos, eos eius dolore, a ut! Ullam pariatur molestiae, nam eaque minus accusantium natus corrupti a alias in nulla quidem debitis, at odit quasi quia reiciendis incidunt enim? Enim reprehenderit dolorem rerum harum ab, sequi ducimus molestiae eius a repellat soluta, quaerat maxime.",
+    harga: "5000",
+    stock : 24
   },
   {
     id: 4,
@@ -26,6 +49,8 @@ export const dataProduct = [
     img_url: "example-product/indomie.jpg",
     deskripsi:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus possimus quidem sit mollitia qui, voluptates unde odio maxime? Consequatur ab mollitia eligendi tempora optio facilis ipsum cupiditate sed quod in suscipit, rerum eius exercitationem similique officia odit itaque necessitatibus quibusdam libero labore voluptatem fugit corporis. Quas beatae, dicta rerum quod voluptatum cupiditate assumenda saepe aliquam accusantium dignissimos, eos eius dolore, a ut! Ullam pariatur molestiae, nam eaque minus accusantium natus corrupti a alias in nulla quidem debitis, at odit quasi quia reiciendis incidunt enim? Enim reprehenderit dolorem rerum harum ab, sequi ducimus molestiae eius a repellat soluta, quaerat maxime.",
+    harga: "5000",
+    stock : 24
   },
   {
     id: 5,
@@ -33,6 +58,8 @@ export const dataProduct = [
     img_url: "example-product/indomie.jpg",
     deskripsi:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus possimus quidem sit mollitia qui, voluptates unde odio maxime? Consequatur ab mollitia eligendi tempora optio facilis ipsum cupiditate sed quod in suscipit, rerum eius exercitationem similique officia odit itaque necessitatibus quibusdam libero labore voluptatem fugit corporis. Quas beatae, dicta rerum quod voluptatum cupiditate assumenda saepe aliquam accusantium dignissimos, eos eius dolore, a ut! Ullam pariatur molestiae, nam eaque minus accusantium natus corrupti a alias in nulla quidem debitis, at odit quasi quia reiciendis incidunt enim? Enim reprehenderit dolorem rerum harum ab, sequi ducimus molestiae eius a repellat soluta, quaerat maxime.",
+    harga: "5000",
+    stock : 24
   },
   {
     id: 6,
@@ -40,6 +67,8 @@ export const dataProduct = [
     img_url: "example-product/indomie.jpg",
     deskripsi:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus possimus quidem sit mollitia qui, voluptates unde odio maxime? Consequatur ab mollitia eligendi tempora optio facilis ipsum cupiditate sed quod in suscipit, rerum eius exercitationem similique officia odit itaque necessitatibus quibusdam libero labore voluptatem fugit corporis. Quas beatae, dicta rerum quod voluptatum cupiditate assumenda saepe aliquam accusantium dignissimos, eos eius dolore, a ut! Ullam pariatur molestiae, nam eaque minus accusantium natus corrupti a alias in nulla quidem debitis, at odit quasi quia reiciendis incidunt enim? Enim reprehenderit dolorem rerum harum ab, sequi ducimus molestiae eius a repellat soluta, quaerat maxime.",
+    harga: "5000",
+    stock : 24
   },
   {
     id: 7,
@@ -47,19 +76,19 @@ export const dataProduct = [
     img_url: "example-product/indomie.jpg",
     deskripsi:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus possimus quidem sit mollitia qui, voluptates unde odio maxime? Consequatur ab mollitia eligendi tempora optio facilis ipsum cupiditate sed quod in suscipit, rerum eius exercitationem similique officia odit itaque necessitatibus quibusdam libero labore voluptatem fugit corporis. Quas beatae, dicta rerum quod voluptatum cupiditate assumenda saepe aliquam accusantium dignissimos, eos eius dolore, a ut! Ullam pariatur molestiae, nam eaque minus accusantium natus corrupti a alias in nulla quidem debitis, at odit quasi quia reiciendis incidunt enim? Enim reprehenderit dolorem rerum harum ab, sequi ducimus molestiae eius a repellat soluta, quaerat maxime.",
+    harga: "5000",
+    stock : 24
   },
 ];
 
 export const dataHistory = [
   {
     id: 1,
-    history:
-      "  Lorem ipsum ",
+    history: "  Lorem ipsum ",
   },
   {
     id: 2,
-    history:
-      "  Lorem ipsum ",
+    history: "  Lorem ipsum ",
   },
   {
     id: 3,

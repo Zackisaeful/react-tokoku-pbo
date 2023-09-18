@@ -1,8 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import CardProduct from "../components/CardProduct";
+import CardKategori from "../components/CardKategori";
 // import {dataProduct }from "../assets/data";
-import { dataProduct } from "../assets/data";
+import { dataKategori, dataProduct } from "../assets/data";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 // Import Swiper React components
@@ -20,19 +21,25 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 const Home = () => {
   const [swiper, setSwiper] = useState(null);
   const [slidesPerView, setSlidesPerView] = useState(4);
+  const [PerViewKategori, setPerViewKategori] = useState(5);
+
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
 
       if (windowWidth >= 801 && windowWidth <= 1000) {
         setSlidesPerView(3);
+        setPerViewKategori(4);
       } else if (windowWidth >= 640 && windowWidth <= 800) {
         // Layar sm
         setSlidesPerView(2);
+        setPerViewKategori(2);
       } else if (windowWidth < 640) {
         setSlidesPerView(1);
+        setPerViewKategori(2);
       } else {
         setSlidesPerView(4);
+        setPerViewKategori(5);
       }
     };
 
@@ -68,9 +75,9 @@ const Home = () => {
 
   return (
     <MainLayout>
-      <section className="section-home w-full  ">
+      <section className="section-home w-full">
         {/* bg-slate-200 */}
-        <div className=" h-[13rem] w-[85%] mx-auto mt-[100px]   flex justify-between ">
+        <div className="md:h-[16rem] md:w-[85%] mx-auto mt-[100px]  flex justify-between ">
           <button className="my-custom-prev">
             <SlArrowLeft />
           </button>
@@ -93,25 +100,31 @@ const Home = () => {
           >
             <SwiperSlide>
               <img
-                src="https://swiperjs.com/demos/images/nature-1.jpg"
+                src="https://www.static-src.com/siva/asset/09_2023/iPhone18Prosept2000x500.jpg"
                 className="rounded-md"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="https://swiperjs.com/demos/images/nature-2.jpg"
+                src="https://icms-image.slatic.net/images/ims-web/632957a3-2d7d-4a2a-bad7-adcae1f79e5a.jpg"
                 className="rounded-md"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="https://swiperjs.com/demos/images/nature-3.jpg"
+                src="https://www.static-src.com/siva/asset/09_2023/desktop-11sep-sanken-car9.jpg?w=1440"
                 className="rounded-md"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="https://swiperjs.com/demos/images/nature-4.jpg"
+                src="https://www.static-src.com/siva/asset/09_2023/Polytron-BBD-Sept-HP-2000x500.jpg?w=1440"
+                className="rounded-md"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://www.static-src.com/siva/asset/09_2023/desktop-11sep-realme-car8.jpg?w=1440"
                 className="rounded-md"
               />
             </SwiperSlide>
@@ -121,7 +134,7 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="container-card m-auto w-[80%] my-10  h-[20rem] flex  justify-between  ">
+        <div className="container-card m-auto w-[70%] h-[20rem] flex  justify-between  ">
           <div className=" flex justify-center items-center">
             <button
               ref={prevButton}
@@ -131,7 +144,7 @@ const Home = () => {
             </button>
           </div>
           <Swiper
-            slidesPerView={slidesPerView}
+            slidesPerView={PerViewKategori}
             onSlideChange={(swiper) => handleSlideChange(swiper)}
             navigation={{
               prevEl: ".kategori-button-prev",
@@ -141,15 +154,12 @@ const Home = () => {
             modules={[Navigation]}
             className="mySwiper"
           >
-            {dataProduct.map((data) => (
+            {dataKategori.map((data) => (
               <SwiperSlide key={data.id}>
-                <CardProduct
-                  alt={"indomie"}
+                <CardKategori
+                  alt={data.kategori}
                   img={data.img_url}
-                  judul={"indomie goreng"}
-                  deskripsi={
-                    "Lorem ipsum dolor sit amet consectetur adipisicing...."
-                  }
+                  judul={data.kategori}
                 />
               </SwiperSlide>
             ))}
@@ -190,7 +200,8 @@ const Home = () => {
                 <CardProduct
                   alt={"indomie"}
                   img={data.img_url}
-                  judul={"indomie goreng"}
+                  judul={data.nama_product}
+                  harga={data.harga}
                   deskripsi={
                     "Lorem ipsum dolor sit amet consectetur adipisicing...."
                   }
@@ -225,7 +236,8 @@ const Home = () => {
                 <CardProduct
                   alt={"indomie"}
                   img={data.img_url}
-                  judul={"indomie goreng"}
+                  judul={data.nama_product}
+                  harga={data.harga}
                   deskripsi={
                     "Lorem ipsum dolor sit amet consectetur adipisicing...."
                   }

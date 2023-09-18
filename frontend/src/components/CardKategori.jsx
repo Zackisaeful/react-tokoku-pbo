@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "antd";
-import {AiOutlineShoppingCart } from "react-icons/ai"
 
 function TruncateText(text, maxLength) {
   if (text.length <= maxLength) {
@@ -12,7 +11,7 @@ function TruncateText(text, maxLength) {
   }
 }
 
-const CardProduct = (props) => {
+const CardKategori = (props) => {
   const [length, setLength] = useState(60);
 
   useEffect(() => {
@@ -40,14 +39,8 @@ const CardProduct = (props) => {
         setLength(60);
       }
     };
-
-    // Pasang event listener
     window.addEventListener("resize", handleResize);
-
-    // Panggil fungsi handleResize secara awal untuk mengatur slidesPerView yang benar
     handleResize();
-
-    // Bersihkan event listener ketika komponen di-unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -59,14 +52,9 @@ const CardProduct = (props) => {
     <Card
       hoverable
       // sm:w-[100%]
-      className="w-52  p-[9px] "
+      className={`w-40 p-[9px]`}
       cover={<img alt={props.alt} src={props.img} />}
     >
-      <div className="flex justify-end  w-full   text-2xl">
-          <button className="">
-          <AiOutlineShoppingCart className="scale-x-[-1] active:text-cyan-600" />
-          </button>
-      </div>
       <div className="m-[-20px] text-left">
         <p className="font-bold ">{props.judul}</p>
         <p className="font-bold ">{props.harga}</p>
@@ -76,4 +64,4 @@ const CardProduct = (props) => {
   );
 };
 
-export default CardProduct;
+export default CardKategori;

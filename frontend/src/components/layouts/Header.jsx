@@ -122,7 +122,7 @@ const Header = () => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className=" hover:text-blue-600 ">
-                <Link to={"/keranjang"} className="text-3xl  ">
+                <Link to={"/shopping-cart"}  className="text-3xl " >
                   <AiOutlineShoppingCart className="scale-x-[-1]" />
                 </Link>
               </li>
@@ -130,11 +130,6 @@ const Header = () => {
                 <Link to={"/login"} className="hover:text-blue-600">
                   LOGIN
                 </Link>{" "}
-                |
-                <Link to={"/register"} className="hover:text-blue-600">
-                  {" "}
-                  REGISTER
-                </Link>
               </li>
               <li className=" font-semibold  hover:text-blue-600  ">
                 <Link to={"/account"} className="hidden">

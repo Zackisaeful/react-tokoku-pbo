@@ -12,7 +12,7 @@ function TruncateText(text, maxLength) {
   }
 }
 
-const CardProduct = (props) => {
+const CardProduct2 = (props) => {
   const [length, setLength] = useState(60);
 
   useEffect(() => {
@@ -58,15 +58,9 @@ const CardProduct = (props) => {
   return (
     <Card
       hoverable
-      // sm:w-[100%]
-      className="w-52  p-[9px] "
+      className="w-100 my-3  p-[9px] flex "
       cover={<img alt={props.alt} src={props.img} />}
     >
-      <div className="flex justify-end  w-full   text-2xl">
-          <button className="">
-          <AiOutlineShoppingCart className="scale-x-[-1] active:text-cyan-600" />
-          </button>
-      </div>
       <div className="m-[-20px] text-left">
         <p className="font-bold ">{props.judul}</p>
         <p className="font-bold ">{props.harga}</p>
@@ -76,4 +70,4 @@ const CardProduct = (props) => {
   );
 };
 
-export default CardProduct;
+export default CardProduct2;

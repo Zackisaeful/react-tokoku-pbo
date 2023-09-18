@@ -1,7 +1,8 @@
-import React from 'react'
-import Header from './Header'
-import Footer1 from './footer/Footer1'
-import Footer2 from './footer/Footer2'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Footer1 from "./footer/Footer1";
+import Footer2 from "./footer/Footer2";
 
 const MainLayout = ({ children, showHeader = true, showFooter1 = false }) => {
   return (
@@ -13,4 +14,4 @@ const MainLayout = ({ children, showHeader = true, showFooter1 = false }) => {
   );
 };
 
-export default MainLayout
+export default MainLayout;
