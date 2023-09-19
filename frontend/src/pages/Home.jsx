@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import CardProduct from "../components/CardProduct";
 import CardKategori from "../components/CardKategori";
-// import {dataProduct }from "../assets/data";
 import { dataKategori, dataProduct } from "../assets/data";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
