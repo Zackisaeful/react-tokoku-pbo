@@ -36,6 +36,9 @@
   display: none;
 }
 
+.container-card-cart::-webkit-scrollbar {
+  display: none;
+}
 
 
 /* :root {
