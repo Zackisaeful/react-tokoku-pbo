@@ -54,7 +54,9 @@ const CardProduct = (props) => {
       cover={<img alt={props.alt} src={props.img} />}
     >
       <div className="flex justify-end  w-full   text-2xl">
-          <button className="">
+          <button className="" 
+                    onClick={props.showModal}
+          >
           <AiOutlineShoppingCart className="scale-x-[-1] active:text-cyan-600" />
           </button>
       </div>
