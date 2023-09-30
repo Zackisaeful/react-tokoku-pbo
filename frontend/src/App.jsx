@@ -9,7 +9,7 @@ import NoPage from "./pages/NoPage";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter >
         <Routes>
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
