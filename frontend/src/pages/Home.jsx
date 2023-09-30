@@ -18,7 +18,7 @@ import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 //
-import Modal from '../components/Modal'
+// import Modal from '../components/Modal'
 
 const Home = () => {
   const [swiper, setSwiper] = useState(null);
@@ -240,14 +240,8 @@ const Home = () => {
             </button>
           </div>
         </section>
-        <button
-          onClick={toggleModal}
-          className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          type="button"
-        >
-          Toggle modal
-        </button>
-        {isModalOpen && <Modal toggleModal={toggleModal} /> }
+   
+        {/* {isModalOpen && <Modal toggleModal={toggleModal} /> } */}
         
       </div>
     </MainLayout>
