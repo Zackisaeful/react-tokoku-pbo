@@ -112,7 +112,7 @@ const Home = () => {
             </button>
           </div>
           {/* kategori */}
-          <div className="container-card  mx-auto w-[85%] my-[20px] sm:h-[20rem]  flex  justify-between  ">
+          <div className="container-card  mx-auto w-[90%] sm:w-[85%] my-[20px] sm:h-[20rem]  flex  justify-between  ">
             <div className=" flex justify-center items-center">
               <button
                 ref={prevButton}

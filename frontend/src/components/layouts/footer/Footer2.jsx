@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom'
 const Footer2 = () => {
   return (
     // bottom-0
-    <footer className="bottom-0 bg-[#D3E7FF] py-12">
+    <footer className="bottom-0 bg-[#D3E7FF] py-12 text-xs sm:text-base ">
       <div className="container mx-auto ">
         <div className="flex flex-wrap mx-10">
           <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 px-4  mb-8 sm:mb-0 ">
-            <h4 className="text-sky-600 text-lg font-semibold mb-6">Company</h4>
+            <h4 className="text-sky-600 text-sm sm:text-lg font-semibold mb-6">Company</h4>
             <ul className="text-gray-400">
               <li>
                 <Link to={'/'} className="hover:text-sky-600">
@@ -33,7 +33,7 @@ const Footer2 = () => {
             </ul>
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 px-4 mb-8 sm:mb-0">
-            <h4 className="text-sky-600 text-lg font-semibold mb-6">
+            <h4 className="text-sky-600  text-sm sm:text-lg font-semibold mb-6">
               Get Help
             </h4>
             <ul className="text-gray-400">
@@ -65,7 +65,7 @@ const Footer2 = () => {
             </ul>
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 px-4 mb-8 sm:mb-0">
-            <h4 className="text-sky-600 text-lg font-semibold mb-6">
+            <h4 className="text-sky-600 text-sm sm:text-lg  font-semibold mb-6">
               Online Shop
             </h4>
             <ul className="text-gray-400">
@@ -92,7 +92,7 @@ const Footer2 = () => {
             </ul>
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 px-4">
-            <h4 className="text-sky-600 text-lg font-semibold mb-6">
+            <h4 className="text-sky-600 text-sm sm:text-lg font-semibold mb-6">
               Follow Us
             </h4>
             <div className="text-gray-400">
