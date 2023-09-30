@@ -18,7 +18,7 @@ import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 //
-// import Modal from '../components/Modal'
+import Modal from '../components/Modal'
 
 const Home = () => {
   const [swiper, setSwiper] = useState(null);
@@ -241,7 +241,7 @@ const Home = () => {
           </div>
         </section>
    
-        {/* {isModalOpen && <Modal toggleModal={toggleModal} /> } */}
+        {isModalOpen && <Modal toggleModal={toggleModal} /> }
         
       </div>
     </MainLayout>
