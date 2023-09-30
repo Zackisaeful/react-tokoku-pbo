@@ -1,5 +1,4 @@
 import React from "react";
-import NumberCounter from '../components/NumberCounter'
 
 const Modal = ({toggleModal}) => {
   return (
@@ -47,7 +46,6 @@ const Modal = ({toggleModal}) => {
             </div>
 
             <div className="p-6 space-y-6">
-            <NumberCounter />
             </div>
             <div className="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
               <button
