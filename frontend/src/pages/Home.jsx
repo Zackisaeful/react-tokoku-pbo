@@ -77,7 +77,7 @@ const Home = () => {
 
   return (
     <MainLayout>
-      <div className="active:bg-none">
+      <div className=" select-none">
         <section className="section-home w-full  ">
           {/* bg-slate-200 */}
           <div className="md:h-[16rem] md:w-[85%] mx-auto mt-[100px]  flex justify-between ">
