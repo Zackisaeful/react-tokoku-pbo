@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import CardProduct from "../components/CardProduct";
 import CardKategori from "../components/CardKategori";
-import { dataKategori, dataProduct } from "../assets/data";
+import { dataBanner , dataKategori, dataProduct } from "../assets/data";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 // Import Swiper React components
@@ -20,7 +20,7 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 const Home = () => {
   const [swiper, setSwiper] = useState(null);
   const [slidesPerView, setSlidesPerView] = useState(4);
-  const [PerViewKategori, setPerViewKategori] = useState(5);
+  const [PerViewKategori, setPerViewKategori] = useState(6);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,13 +32,18 @@ const Home = () => {
       } else if (windowWidth >= 640 && windowWidth <= 800) {
         // Layar sm
         setSlidesPerView(2);
-        setPerViewKategori(2);
-      } else if (windowWidth < 640) {
+        setPerViewKategori(3);
+      } else if ( windowWidth > 470 && windowWidth < 640   ) {
         setSlidesPerView(1);
-        setPerViewKategori(2);
-      } else {
-        setSlidesPerView(4);
         setPerViewKategori(5);
+      } 
+       else if (windowWidth <= 470) {
+        setSlidesPerView(1);
+        setPerViewKategori(4);
+      } 
+      else {
+        setSlidesPerView(4);
+        setPerViewKategori(6);
       }
     };
 
@@ -97,47 +102,25 @@ const Home = () => {
             modules={[Autoplay, EffectFade, Navigation, Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <img
-                src="https://www.static-src.com/siva/asset/09_2023/iPhone18Prosept2000x500.jpg"
-                className="rounded-md"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://icms-image.slatic.net/images/ims-web/632957a3-2d7d-4a2a-bad7-adcae1f79e5a.jpg"
-                className="rounded-md"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://www.static-src.com/siva/asset/09_2023/desktop-11sep-sanken-car9.jpg?w=1440"
-                className="rounded-md"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://www.static-src.com/siva/asset/09_2023/Polytron-BBD-Sept-HP-2000x500.jpg?w=1440"
-                className="rounded-md"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://www.static-src.com/siva/asset/09_2023/desktop-11sep-realme-car8.jpg?w=1440"
-                className="rounded-md"
-              />
-            </SwiperSlide>
+            {dataBanner.map((data) => (
+              <SwiperSlide key={data.id}>
+                <img
+                  src={data.image_url}
+                  className="rounded-md"
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
           <button className="my-custom-next">
             <SlArrowRight />
           </button>
         </div>
-
-        <div className="container-card m-auto w-[70%] h-[20rem] flex  justify-between  ">
+{/* kategori */}
+        <div className="container-card  mx-auto w-[85%] my-[20px] sm:h-[20rem]  flex  justify-between  ">
           <div className=" flex justify-center items-center">
             <button
               ref={prevButton}
-              className="kategori-button-prev opacity-5  bg-white drop-shadow-xl rounded-[100%] h-[50px]  px-[17px]  "
+              className="kategori-button-prev opacity-0 bg-white drop-shadow-xl rounded-[100%] p-[10px]  sm:p-[17px]   "
             >
               <SlArrowLeft />
             </button>
@@ -163,16 +146,17 @@ const Home = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className=" flex justify-center items-center">
+          <div className=" flex justify-center items-center ">
             <button
               ref={nextButton}
-              className="kategori-button-next bg-white drop-shadow-xl rounded-[100%] h-[50px]  px-[17px]  my-[12%]"
+              className="kategori-button-next bg-white drop-shadow-xl rounded-[100%] p-[10px]  sm:p-[17px]  "
             >
-              <SlArrowRight />
+              <SlArrowRight className="w-3 h-3 " />
             </button>
           </div>
         </div>
       </section>
+
       {/* tambah class pada button next dan prev otomatis untuk pembeda */}
       <section className="section-home w-full bg-blue ">
         <hr className="border-t-2 t-0 border-gray-300 w-4/5 mx-auto my-4" />

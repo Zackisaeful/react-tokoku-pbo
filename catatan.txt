@@ -1,0 +1,3 @@
+- State
+data yang dikelola oleh komponen dimana memungkinkan komponen untuk menyimpan data yang dapat berubah
+state umumnya digunakan untuk menyimpan input, status

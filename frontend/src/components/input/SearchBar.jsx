@@ -49,7 +49,7 @@ const Searchbar = (props) => {
       <input
         type="search"
         id="default-search"
-        className="block w-full h-[40px] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:outline-none"
+        className="block w-full h-[40px] p-4 pl-10 text-xs  sm:text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:outline-none"
         placeholder="Cari barang..."
         required
         onFocus={handleFocus}
@@ -57,7 +57,7 @@ const Searchbar = (props) => {
       />
       <button
         type="submit"
-        className="text-white  absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm text-center h-[30px] top-[5px] px-[11px] "
+        className="text-white  absolute right-2.5 bottom-2.5  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-xs sm:text-sm text-center h-[30px] top-[5px] px-[11px] "
       >
         {" "}
         Cari

@@ -41,7 +41,7 @@ const Header = () => {
             </Link>
             <div className="md:hidden flex ">
               <button
-                className={`bg-white h-7 px-2 my-auto rounded sm:hidden mx-5 
+                className={`bg-white h-7 px-2 my-auto rounded sm:hidden   
                 ${search ? "mx-0" : "mx-5"}  
                 ${search ? "mt-1" : "mx-auto"}  
                 ${search ? "block" : "hidden"}  
@@ -49,18 +49,18 @@ const Header = () => {
                 `}
                 onClick={() => setSearch(false)}
               >
-                <FiArrowLeft className="w-6 h-6 text-gray-500 " />
+                <FiArrowLeft className="w-4 h-4 text-gray-500 " />
               </button>
 
               <button
-                className={`bg-white h-7 px-2 my-auto rounded sm:hidden mx-5 
+                className={`bg-white h-7 sm:h-7 px-2 my-auto rounded sm:hidden mx-5 
                 ${search ? "mx-0" : "mx-5"}  
                 ${search ? "mt-1" : "mx-auto"}  
                 ${search ? "hidden" : "bg-white"}  
                 `}
                 onClick={() => setSearch(true)}
               >
-                <MdSearch className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                <MdSearch className="w-5 h-5 sm:w-6 sm:h-6 text-gray-500 dark:text-gray-400" />
               </button>
 
               <button
@@ -105,15 +105,14 @@ const Header = () => {
         {/* <div className="mx-[auto]   hidden sm:block  sm:w-[70%]   md:w-[40%]  lg:w-[40%] xl:w-[40%]  "> */}
         {/* <div className="mx-[auto]   hidden md:block  sm:w-[70%]   md:w-[40%]  lg:w-[40%] xl:w-[40%]  "> */}
 
-        <div
-          className={`mx-[auto] w-[70%]  h-[53px] sm:block sm:mt-[-50px] sm:h-[55px]  md:mt-auto sm:mt-auto sm:mx-auto md:w-[40%] sm:w-[50%] lg:w-[40%] xl:w-[40%] 
+        <div  
+          className={`mx-[auto] w-[70%]  h-[53px] sm:block sm:mt-[-51px] sm:h-[60px]  md:mt-auto sm:mt-auto sm:mx-auto md:w-[40%] sm:w-[50%] lg:w-[40%] xl:w-[40%] 
           ${search ? "block" : "hidden"}
           ${search ? "mt-[-45px]" : "hidden"}
           `}
         >
           <SearchBar />
         </div>
-
         <div>
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
