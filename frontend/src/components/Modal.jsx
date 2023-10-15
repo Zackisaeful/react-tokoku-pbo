@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import NumberCounter from "./NumberCounter";
 
 const Modal = ({ toggleModal }) => {
+
+
+  
   return (
     <div
       id="defaultModal"
@@ -21,7 +24,7 @@ const Modal = ({ toggleModal }) => {
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Masukan ke keranjang
               </h3>
-    
+
               <button
                 type="button"
                 onClick={toggleModal}
@@ -46,9 +49,14 @@ const Modal = ({ toggleModal }) => {
               </button>
             </div>
 
-            <div className="-pt-3 px-6 pb-10 space-y-6">
-       
-              <NumberCounter />
+            <div className="h-24 px-6  space-y-6">
+              <label
+                htmlFor="custom-input-number"
+                className="w-full text-gray-700 text-sm font-semibold"
+              >
+                Masukan jumlah
+              </label>
+              <NumberCounter   />
             </div>
             <div className="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
               <button

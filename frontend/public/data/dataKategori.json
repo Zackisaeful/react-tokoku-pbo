@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "kategori": "makanan",
+    "img_url": "example-kategori-image/makanan.jpg"
+  },
+  {
+    "id": 2,
+    "kategori": "handphone dan tablet",
+    "img_url": "example-kategori-image/handphoneDanElectronik.jpg"
+  },
+  {
+    "id": 3,
+    "kategori": "komputer dan electronik",
+    "img_url": "example-kategori-image/komputer.jpg"
+  },
+  {
+    "id": 4,
+    "kategori": "minuman",
+    "img_url": "example-kategori-image/minuman.jpg"
+  },
+  {
+    "id": 5,
+    "kategori": "minuman",
+    "img_url": "example-kategori-image/minuman.jpg"
+  },
+  {
+    "id": 6,
+    "kategori": "minuman",
+    "img_url": "example-kategori-image/minuman.jpg"
+  },
+  {
+    "id": 7,
+    "kategori": "minuman",
+    "img_url": "example-kategori-image/minuman.jpg"
+  }
+]

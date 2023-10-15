@@ -18,7 +18,7 @@ import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 //
-import Modal from '../components/Modal'
+import Modal from "../components/Modal";
 
 const Home = () => {
   const [swiper, setSwiper] = useState(null);
@@ -83,6 +83,76 @@ const Home = () => {
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  // Fetch data
+  const [kategoris, setKategoris] = useState([]);
+  const [dataProduk, setDataProduk] = useState({});
+
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("/data/dataProduk.json");
+        if (!response.ok) {
+          throw new Error("Data tidak tersedia");
+        }
+        const jsonData = await response.json();
+
+        if (jsonData && jsonData.kategoris && Array.isArray(jsonData.kategoris)) {
+          // Mengacak urutan kategori
+          const shuffledKategoris = jsonData.kategoris.sort(() => Math.random() - 0.5);
+
+          // Mengacak urutan produk di setiap kategori
+          const shuffledProdukKategoris = shuffledKategoris.map((kategori) => {
+            const shuffledProduk = kategori.produk.sort(() => Math.random() - 0.5);
+            return { ...kategori, produk: shuffledProduk };
+          });
+
+          setKategoris(shuffledProdukKategoris);
+        } else {
+          throw new Error("Struktur data tidak valid");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  // normal 
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       const response = await fetch("/data/dataProduk.json");
+  //       if (!response.ok) {
+  //         throw new Error("Data tidak tersedia");
+  //       }
+  //       const jsonData = await response.json();
+
+  //       setKategoris(jsonData.kategoris);
+
+  //       // if (jsonData && jsonData.kategoris && Array.isArray(jsonData.kategoris)) {
+  //       // } else {
+  //       //   setKategoris(jsonData.kategoris);
+  //       //   throw new Error("Struktur data tidak valid");
+  //       // }
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
+  //   fetchData();
+  // }, []);
+
+  // format rupiah
+  const formatSaldo = (rupiah) => {
+    if (rupiah) {
+      return rupiah.toLocaleString("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFrantionDigits: 0, // kalo pakek 0 nol dibelakangnya ilang
+      });
+    }
   };
 
   return (
@@ -161,88 +231,55 @@ const Home = () => {
               </button>
             </div>
           </div>
-        </section>
-
-        {/* tambah class pada button next dan prev otomatis untuk pembeda */}
-        <section className="section-home w-full bg-blue ">
-          <hr className="border-t-2 t-0 border-gray-300 w-4/5 mx-auto my-4" />
-          <div className="bg-gray-300 h-[30px] w-[100px] mx-[100px] py[10px] text-center rounded  ">
-            makanan
-          </div>
-          <div className="container-card m-auto w-[80%] my-10 bg-blue h-[20rem] flex  justify-between ">
-            <button className="my-custom-prev-button ">
-              <SlArrowLeft />
-            </button>
-
-            <Swiper
-              slidesPerView={slidesPerView}
-              navigation={{
-                prevEl: ".my-custom-prev-button",
-                nextEl: ".my-custom-next-button",
-              }}
-              spaceBetween={30}
-              modules={[Navigation]}
-              className="mySwiper"
-            >
-              {dataProduct.map((data) => (
-                <SwiperSlide key={data.id}>
-                  <CardProduct
-                    alt={"indomie"}
-                    img={data.img_url}
-                    judul={data.nama_product}
-                    harga={data.harga}
-                    deskripsi={
-                      "Lorem ipsum dolor sit amet consectetur adipisicing...."
-                    }
-                    showModal={setIsModalOpen}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <button className="my-custom-next-button">
-              <SlArrowRight />
-            </button>
-          </div>
-          <hr className="border-t-2 t-0 border-gray-300 w-4/5 mx-auto my-4" />
-          <div className="bg-gray-300 h-[30px] w-[100px] mx-[100px] py[10px] text-center rounded ">
-            minuman
-          </div>
-          <div className="container-card m-auto w-[80%] my-10 bg-blue h-[20rem] flex  justify-between ">
-            <button className="my-custom-prev-button ">
-              <SlArrowLeft />
-            </button>
-            <Swiper
-              slidesPerView={slidesPerView}
-              navigation={{
-                prevEl: ".my-custom-prev-button",
-                nextEl: ".my-custom-next-button",
-              }}
-              spaceBetween={30}
-              modules={[Navigation]}
-              className="mySwiper"
-            >
-              {dataProduct.map((data) => (
-                <SwiperSlide key={data.id}>
-                  <CardProduct
-                    alt={"indomie"}
-                    img={data.img_url}
-                    judul={data.nama_product}
-                    harga={data.harga}
-                    deskripsi={
-                      "Lorem ipsum dolor sit amet consectetur adipisicing...."
-                    }
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <button className="my-custom-next-button">
-              <SlArrowRight />
-            </button>
+          {/* produk */}
+          <div>
+            {kategoris.map((kategori) => (
+              <div key={kategori.id}>
+                <hr className="border-t-2 t-0 border-gray-300 w-4/5 mx-auto my-4" />
+                <h2 className="bg-gray-300 h-[30px] w-[100px] mx-[100px] text-center rounded">
+                  {kategori.nama_kategori}
+                </h2>
+                <div className="container-card m-auto w-[80%] my-10 bg-blue h-[20rem] flex justify-between">
+                  <button
+                    className={`my-custom-prev-button-${kategori.nama_kategori}`}
+                  >
+                    <SlArrowLeft />
+                  </button>
+                  <Swiper
+                    slidesPerView={slidesPerView}
+                    navigation={{
+                      prevEl: `.my-custom-prev-button-${kategori.nama_kategori}`,
+                      nextEl: `.my-custom-next-button-${kategori.nama_kategori}`,
+                    }}
+                    spaceBetween={30}
+                    modules={[Navigation]}
+                    className="mySwiper"
+                  >
+                    {kategori.produk.map((produk, index) => (
+                      <SwiperSlide key={index}>
+                        <CardProduct
+                          alt={produk.nama_produk}
+                          img={produk.img_url}
+                          judul={produk.nama_produk}
+                          harga={formatSaldo(produk.harga)}
+                          deskripsi={produk.deskripsi}
+                          stock={produk.stock}
+                          showModal={setIsModalOpen}
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  <button
+                    className={`my-custom-next-button-${kategori.nama_kategori}`}
+                  >
+                    <SlArrowRight />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
-   
-        {isModalOpen && <Modal toggleModal={toggleModal} /> }
-        
+        {isModalOpen && <Modal toggleModal={toggleModal} />}
       </div>
     </MainLayout>
   );

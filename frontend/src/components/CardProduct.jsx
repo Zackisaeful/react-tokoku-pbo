@@ -63,6 +63,7 @@ const CardProduct = (props) => {
       <div className="m-[-20px] text-left">
         <p className="font-bold ">{props.judul}</p>
         <p className="font-bold ">{props.harga}</p>
+        <p className="">stok : {props.stock}</p>
         <p className="">{truncatedDeskripsi}</p>
       </div>
     </Card>

@@ -1,0 +1,134 @@
+{
+  "kategoris": [
+    {
+      "id": 1,
+      "nama_kategori": "makanan",
+      "produk": [
+        {
+          "nama_produk": "indomie goreng",
+          "harga": 3000,
+          "stock": 12,
+          "deskripsi": "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/indomie.jpg",
+          "id": 1
+        },
+        {
+          "nama_produk": "mie sedap goreng",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/mie sedap.jpg",
+          "id": 2
+        },
+        {
+          "nama_produk": "indomie goreng aceh",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/indomie aceh2.jpg",
+          "id": 3
+        },
+        {
+          "nama_produk": "koko krunch",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/koko krunch.jpg",
+          "id": 4
+        },
+        {
+          "nama_produk": "koko krunch",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/koko krunch2.jpg",
+          "id": 5
+        },
+        {
+          "nama_produk": "Minyak goreng Bimoli",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/bimoli.jpg",
+          "id": 6
+        },
+        {
+          "nama_produk": "Minyak goreng sovia",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/sovia.jpg",
+          "id": 7
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nama_kategori": "minuman",
+      "produk": [
+        {
+          "nama_produk": "Aqua",
+          "harga": 3000,
+          "stock": 12,
+          "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/aqua.jpg",
+          "id": 1
+        },
+        {
+          "nama_produk": "cleo",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/cleo.jpg",
+          "id": 2
+        },
+        {
+          "nama_produk": "coca cola",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/coca cola.jpg",
+          "id": 3
+        },
+        {
+          "nama_produk": "dancow",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/dancow.jpg",
+          "id": 4
+        },
+        {
+          "nama_produk": "pucuk harum",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/pucuk harum.jpg",
+          "id": 5
+        },
+        {
+          "nama_produk": "nutri boots",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/nutri boost.jpg",
+          "id": 6
+        }
+        ]
+    },
+    {
+      "id": 3,
+      "nama_kategori": "Laptop",
+      "produk": [
+        {
+          "nama_produk": "ASUS M1603QA",
+          "harga": 3500,
+          "stock": 10,
+          "deskripsi": "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "img_url": "example-product/asus A416Mao.jpg",
+          "id": 6
+        }
+      ]
+    }
+  ]
+}
